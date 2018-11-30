@@ -5,7 +5,10 @@
 
   <ul class="list-unstyled">
     {% for product in products %}
-      <li>{{ product.name }}</li>
+      <li><a href="http://localhost:5000/products/{{ product.id }}">{{ product.name }}</a></li>
     {% endfor %}
   </ul>
+
 {% endblock %}
+
+

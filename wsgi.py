@@ -36,7 +36,8 @@ def products():
 def read_product(id):
     product = db.session.query(Product).get(id) # SQLAlchemy request => 'SELECT * FROM products'
 
-    return product_schema.jsonify(product)
+    return render_template('product.html', toto=product)
+    #return product_schema.jsonify(product)
 
 @app.route('/product', methods=['POST'])
 def create_product():
